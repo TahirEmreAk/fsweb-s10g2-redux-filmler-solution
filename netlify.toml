@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA fallback: her yolu index.html'e yönlendir ki client-side router
+# (/movies, /movies/:id, /movies/add) doğrudan yüklemede/yenilemede 404 vermesin.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
